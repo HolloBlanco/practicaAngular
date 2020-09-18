@@ -1,0 +1,36 @@
+<h3>{{titulo}}</h3>
+<hr>
+<!--Para indicar que el formulario de angular ponemos un #-->
+<form #formProducto="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-producto">
+	
+	<label>Nombre	
+		<span *ngIf="!nombre.valid && nombre.touched">requerido</span>
+	</label>
+	<input type="text" class="form-control" #nombre="ngModel" name="nombre"
+		[(ngModel)]="producto.nombre" required >	
+
+	<label>Descripción
+		<span *ngIf="!descripcion.valid && descripcion.touched">requerido</span>
+	</label>
+	<textarea class="form-control" #descripcion="ngModel" name="descripcion"
+		[(ngModel)]="producto.descripcion" required>
+	</textarea>
+	<!--#descripcion="ngModel" define a un campo de formulario-->
+	<label>Precio
+		<span *ngIf="!precio.valid && precio.touched">requerido o no es correcto</span>
+	</label>
+	<input type="text" class="form-control" #precio="ngModel" name="precio"
+		[(ngModel)]="producto.precio" required pattern="[0-9]+">
+
+	<label>Imagen
+		<!--<span *ngIf="!nombre.valid && nombre.touched">Imagin requerido</span>-->
+	</label>
+	<!--<input type="file" class="form-control" (change)="fileChangeEvent($event)">-->
+	<input type="file" (change)="onFileSelected($event)">
+
+	<br/>		
+	<!--<input type="submit" value="{{titulo}}" class="btn btn-success" 
+	[disabled]="!formProducto.form.valid">-->
+	<button type="button" (click)="onUpload()"></button>
+
+</form>

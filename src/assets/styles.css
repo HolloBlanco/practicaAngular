@@ -1,0 +1,75 @@
+#content{	
+	margin-top: 40px;
+	/*border:3px solid #eee;*/
+	border-radius: 4px ;
+	background: white;
+	box-shadow: 0px 5px 5px #ccc;
+	padding: 0px;/*Esta parte hace que el marco verde 
+	se iguale a la caja en que esta contenido*/
+	overflow: hidden;
+} 
+#form-producto label{
+	margin-top: 10px;
+}
+
+#header{
+	background: #9df100; 
+	color: white;
+	margin:0px;
+	height: 100px;
+	line-height: 90px;
+}
+
+#header h1{
+	display: block;
+	line-height: 90px;/*Baja el texto de esta parte, con esto podemos centrarlo*/
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#main .jumbotron{
+	padding: 50px;
+	margin-top: 20px;
+	border-radius: 20px;
+	background: #3af10c8f;
+}
+#nav{
+	padding: 0px;
+	margin: 0px;
+	height: 25px;
+	background: #31de18;	
+}
+#nav ul{
+	margin: 0px;
+	list-style: none;	
+	padding-left: 30px;	
+}
+#nav ul li{
+	float: left; 
+	margin-right: 10px;	
+
+}
+#nav ul li a{
+	display: block;
+	color: white;	
+	height: 30px;
+	line-height: 22.5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: all 300ms;
+}
+#nav ul li a:hover{
+	text-decoration: none;
+	background:#9df100;
+}
+.activado{
+	text-decoration: none !important;
+	background: #ddd !important;
+	border-bottom: 2px solid black !important;
+}
+#footer{
+	margin-top: 50px;
+	padding-top: 10px;
+	border-top: 1px solid #cdc;
+	color: gray;
+}

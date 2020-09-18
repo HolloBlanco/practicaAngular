@@ -1,0 +1,14 @@
+<h2>{{titulo}}</h2>
+
+<div *ngIf="!productos">
+	Cargando listado de productos...
+</div>
+<div *ngIf="productos">
+	<ul><!--Si no tiene let mostrara error, el programa no sabe que
+		producto es una variable sin eso-->
+		<li *ngFor="let producto of productos">
+			<strong>{{producto.nombre}}</strong>
+			<p>€ {{producto.precio}}</p>
+		</li>
+	</ul>	
+</div>
